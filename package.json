@@ -4,14 +4,13 @@
   "description": "proyecto con nodejs",
   "main": "index.js",
   "scripts": {
-
-   "dev" : "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebastiananea/agenciaViajesNodeJS.git"
   },
-  "type":"module",
+  "type": "module",
   "author": "Sebastian Anea",
   "license": "ISC",
   "bugs": {
@@ -19,7 +18,8 @@
   },
   "homepage": "https://github.com/sebastiananea/agenciaViajesNodeJS#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
