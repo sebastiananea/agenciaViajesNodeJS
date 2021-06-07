@@ -9,6 +9,13 @@ const port = process.env.PORT || 4000;
 //Habilitar pug
 app.set('view engine', 'pug')
 
+//Devolver año actual para el footer
+app.use((req, res, next) => {
+    const year = new Date();
+    res.locals.actualYear = year.getFullYear();
+    return next()
+})
+
 //carpeta publica, css e img
 app.use(express.static('public'));
 
