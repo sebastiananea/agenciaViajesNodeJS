@@ -16,6 +16,12 @@ app.use((req, res, next) => {
     return next()
 })
 
+//Devolver el titulo para el index
+app.use((req, res, next) => {
+    res.locals.nombreSitio = 'Agencia de Viajes';
+    return next()
+})
+
 //carpeta publica, css e img
 app.use(express.static('public'));
 
