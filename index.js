@@ -1,7 +1,14 @@
 // const express = require('express'); Common JS
 import express from 'express' //Para que esto funcione, en package.json, agrego "type" : "module"
 import router from './routes/index.js' //hay que colocar la extension del archivo
+import db from './config/db.js'
+
 const app  = express();
+
+//Conectar a la base de datos
+db.authenticate()
+    .then( () => console.log('base de datos conectada'))
+    .catch( error => console.log(error))
 
 //Definir puerto
 const port = process.env.PORT || 4000; 
