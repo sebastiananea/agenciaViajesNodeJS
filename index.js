@@ -32,6 +32,9 @@ app.use((req, res, next) => {
 //carpeta publica, css e img
 app.use(express.static('public'));
 
+//Agregar body parser para leer los datos del formulario
+app.use(express.urlencoded({ extended : true }));
+
 //Agregar router
 app.use('/', router);
 
