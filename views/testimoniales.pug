@@ -5,7 +5,11 @@ block contenido
 
         h1.text-center.mt-5= pagina 
 
-        .row    
+        blockquote.text-center Lee las experiencias de nuestros clientes
+
+        include ./layout/bloque_testimoniales
+        
+        .row 
             .col-md-12
                 h2.d-block.w-100.text-center Agrega un Testimonial
                 if(errores)
